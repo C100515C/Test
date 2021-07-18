@@ -1,0 +1,25 @@
+//
+//  ViewA.m
+//  Test
+//
+//  Created by chen chen on 2021/7/1.
+//  Copyright © 2021 chen chen. All rights reserved.
+//
+
+#import "ViewA.h"
+
+@implementation ViewA
+
+
+/*
+此处可以做事件拦截
+*/
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    NSLog(@"view a hit test");
+    return [super hitTest:point withEvent:event];
+}
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+    NSLog(@"view a point inside");
+    return [super pointInside:point withEvent:event];
+}
+@end
